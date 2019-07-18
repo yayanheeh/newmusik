@@ -3,7 +3,7 @@
     <div class="trackDetails">
       <img :src="playerCurrentTrack.artwork_url" alt="">
       <div class="titleWrapper">
-        <router-link class="title" :to="`/tracks/${playerCurrentTrack.id}`">
+        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
           {{playerCurrentTrack.title}}
         </router-link>
         <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">

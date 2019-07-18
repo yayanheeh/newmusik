@@ -1,6 +1,7 @@
 <template>
   <div class="playerWrapper" v-if="!!playerCurrentTrack">
-    <div class="trackDetails">
+    
+    <div class="deskContent"><div class="trackDetails">
       <img :src="playerCurrentTrack.artwork_url" alt="">
       <div class="titleWrapper">
         <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
@@ -11,6 +12,22 @@
         </router-link>
       </div>
     </div>
+    </div>
+<div class="phoneContent"><div class="trackDetails">
+      <img :src="playerCurrentTrack.artwork_url" alt="">
+      <div class="titleWrapper">
+        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
+          {{playerCurrentTrack.title}}
+        </router-link>
+        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
+          {{playerCurrentTrack.user.username}}
+        </router-link>
+      </div>
+    </div>
+    </div>
+
+    
+    
     <div class="mainButtons">
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
         <img src="../assets/icons/previous.svg" />
@@ -307,4 +324,16 @@ export default {
   .durationTime {
     font-size: 12px;
   }
+</style>
+
+<style>
+@media all and (max-width: 959px) {
+    .deskContent {display:block;}
+    .phoneContent {display:none;}
+}
+
+@media all and (max-width: 479px) {
+    .deskContent {display:none;}
+    .phoneContent {display:block;}
+}
 </style>

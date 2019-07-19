@@ -5,6 +5,15 @@
     
     </div>
     <div class="mainButtons">
+
+ <div class="titleWrapper">
+       <small> <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
+          {{playerCurrentTrack.title}}
+        </router-link>
+        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
+          {{playerCurrentTrack.user.username}}
+        </router-link></small><br/>
+      
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
       <img src="../assets/icons/previous.svg" />
       </button>

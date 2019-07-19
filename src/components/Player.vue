@@ -14,7 +14,8 @@
       </div>
     </div></div>
     <div class="mainButtons">
-
+  <img :src="playerCurrentTrack.artwork_url" alt="">
+   
  
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
       <img src="../assets/icons/previous.svg" />

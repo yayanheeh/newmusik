@@ -1,25 +1,9 @@
-<template>
-  <div class="playerWrapper" v-if="!!playerCurrentTrack">
-    
-    
-<div class="trackDetails">
-      <img :src="playerCurrentTrack.artwork_url" alt="">
-    
-    </div>
-    
-
-    
-      <div class="titleWrapper">
-        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
-          {{playerCurrentTrack.title}}
-        </router-link>
-        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
-          {{playerCurrentTrack.user.username}}
-        </router-link>
-      </div>
+<template>tes
+  <div class="playerWrapper" v-if="!!playerCurrentTrack"> 
+     
     <div class="mainButtons">
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
-       Yan trek <img src="../assets/icons/previous.svg" />
+      <img src="../assets/icons/previous.svg" />
       </button>
       <button @click="$store.dispatch(isPlay ? 'pause' : 'play')" class="playButton">
         <img

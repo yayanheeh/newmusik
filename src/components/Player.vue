@@ -13,7 +13,7 @@
         <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
           {{playerCurrentTrack.user.username}}
         </router-link></small><br/>
-      
+      </div>
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
       <img src="../assets/icons/previous.svg" />
       </button>
@@ -181,8 +181,8 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 85px;
-    background: #fff;
+    height: 60px;
+    background: #000000;
     display: flex;
     z-index: 99999;
     flex-direction: column;

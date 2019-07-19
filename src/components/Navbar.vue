@@ -69,7 +69,6 @@
   </el-row>
 </template>
 
-<div class="header" id="myHeader">
 
 
 <script>
@@ -128,7 +127,7 @@ export default {
   },
 };
 </script>
-</div>
+
 <style scoped>
   .wrapper {
     margin: 0 auto;

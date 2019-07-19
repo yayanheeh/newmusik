@@ -1,33 +1,22 @@
 <template>
   <div class="playerWrapper" v-if="!!playerCurrentTrack">
     
-    <div class="deskContent"><div class="trackDetails">
+    
+<div class="trackDetails">
       <img :src="playerCurrentTrack.artwork_url" alt="">
-      <div class="titleWrapper">
-        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
-          {{playerCurrentTrack.title}}
-        </router-link>
-        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
-          {{playerCurrentTrack.user.username}}
-        </router-link>
-      </div>
+    
     </div>
-    </div>
-<div class="phoneContent"><div class="trackDetails">
-      <img :src="playerCurrentTrack.artwork_url" alt="">
-      <div class="titleWrapper">
-        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
-          {{playerCurrentTrack.title}}
-        </router-link>
-        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
-          {{playerCurrentTrack.user.username}}
-        </router-link>
-      </div>
-    </div>
-    </div>
+    
 
     
-    
+      <div class="titleWrapper">
+        <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
+          {{playerCurrentTrack.title}}
+        </router-link>
+        <router-link class="user" :to="`/users/${playerCurrentTrack.user.id}`">
+          {{playerCurrentTrack.user.username}}
+        </router-link>
+      </div>
     <div class="mainButtons">
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
        Yan trek <img src="../assets/icons/previous.svg" />

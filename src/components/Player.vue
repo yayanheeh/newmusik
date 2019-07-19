@@ -1,6 +1,9 @@
-<template>tes
+<template>
   <div class="playerWrapper" v-if="!!playerCurrentTrack"> 
-     
+     <div class="trackDetails">
+      <img :src="playerCurrentTrack.artwork_url" alt="">
+    
+    </div>
     <div class="mainButtons">
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
       <img src="../assets/icons/previous.svg" />

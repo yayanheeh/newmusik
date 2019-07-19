@@ -1,25 +1,10 @@
 <template>
-  <v-layout row>
-      <v-flex xs6 order-lg2>
-        <v-card dark tile flat color="error">
-          <v-card-text>#1</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs6>
-        <v-card dark tile flat color="red darken-4">
-          <v-card-text>#2</v-card-text>
-        </v-card>
-      </v-flex>
-    </v-layout>
+ 
 
   <div class="playerWrapper" v-if="!!playerCurrentTrack"> 
-     <div class="trackDetails">
+     <div class="deskContent"><div class="trackDetails">
       <img :src="playerCurrentTrack.artwork_url" alt="">
-    
-    </div>
-    <div class="mainButtons">
-
- <div class="titleWrapper">
+    <div class="titleWrapper">
        <small> <router-link class="hidden-sm-and-down" class="title" :to="`/tracks/${playerCurrentTrack.id}`">
           {{playerCurrentTrack.title}}
         </router-link>
@@ -27,6 +12,10 @@
           {{playerCurrentTrack.user.username}}
         </router-link></small><br/>
       </div>
+    </div></div>
+    <div class="mainButtons">
+
+ 
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
       <img src="../assets/icons/previous.svg" />
       </button>
@@ -195,7 +184,7 @@ export default {
     left: 0;
     width: 100%;
     height: 60px;
-    background: #000000;
+    background: #fff;
     display: flex;
     z-index: 99999;
     flex-direction: column;

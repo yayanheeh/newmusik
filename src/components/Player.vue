@@ -30,7 +30,7 @@
     
     <div class="mainButtons">
       <button :disabled="playerTracks.length === 0" @click="handleChangeTrack('previous')">
-        <img src="../assets/icons/previous.svg" />
+       Yan trek <img src="../assets/icons/previous.svg" />
       </button>
       <button @click="$store.dispatch(isPlay ? 'pause' : 'play')" class="playButton">
         <img

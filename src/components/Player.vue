@@ -265,7 +265,7 @@ export default {
   }
   .seekbarWrapper {
     margin-top: 5px;
-    width: 600px;
+    width: 100px;
     display: flex;
     justify-content: stretch;
     align-items: center;

@@ -7,7 +7,7 @@
          ? ' active' : ''}`"
         @click="onClick(trackData)"
       >
-        <div class="playOverlay">
+        <div class="playOverlay">yayan
           <img v-if="isPlay" class="playing" src="../assets/playing.gif" />
           <font-awesome-icon icon="stop-circle" class="stop" />
           <font-awesome-icon icon="play-circle" class="play" />

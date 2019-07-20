@@ -8,7 +8,7 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <router-link to="/">
+        <router-link to="/"><br/>
           <img src="../assets/logo.png" class="logo" />
         </router-link>
         <form @submit.prevent="handleSearch">

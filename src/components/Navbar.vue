@@ -1,5 +1,6 @@
 <template>
- 
+   <fixed-header>
+    <div class="navbar">
 <el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
@@ -65,7 +66,10 @@
          />
       </el-col>
     </div>
-  </el-row>
+  </el-row></div>
+  </fixed-header>
+
+
 </template>
 
 
@@ -233,7 +237,24 @@ export default {
   }
 </style>
 
+<script>
+import FixedHeader from 'vue-fixed-header'
 
+export default {
+  components: {
+    FixedHeader
+  }
+}
+</script>
+
+<style>
+.navbar.vue-fixed-header--isFixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+</style>
 
 
   

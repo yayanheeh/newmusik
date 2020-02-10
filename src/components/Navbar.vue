@@ -241,13 +241,13 @@ export default {
 </style>
 
 <style>
-#content-desktop {display: block;}
-#content-mobile {display: none;}
+.content-desktop {display: block;}
+.content-mobile {display: none;}
 
 @media screen and (max-width: 768px) {
 
-#content-desktop {display: none;}
-#content-mobile {display: block;}
+.content-desktop {display: none;}
+.content-mobile {display: block;}
 
 }
 </style>

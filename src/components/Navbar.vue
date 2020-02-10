@@ -1,6 +1,6 @@
 <template>
-   <fixed-header>
-    <div class="navbar">
+   
+    <div class="header">
 <el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
@@ -67,7 +67,7 @@
       </el-col>
     </div>
   </el-row></div>
-  </fixed-header>
+  
 
 
 </template>
@@ -240,11 +240,15 @@ export default {
 
 
 <style>
-.navbar.vue-fixed-header--isFixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
+.header {
+  position:fixed; /* fixing the position takes it out of html flow - knows
+                   nothing about where to locate itself except by browser
+                   coordinates */
+  left:0;           /* top left corner should start at leftmost spot */
+  top:0;            /* top left corner should start at topmost spot */
+  width:100vw;      /* take up the full browser width */
+  z-index:200;  /* high z index so other content scrolls underneath */
+  height:100px;     /* define height for content */
 }
 </style>
 

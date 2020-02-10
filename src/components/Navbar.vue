@@ -8,12 +8,10 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-<img src="../assets/logo.png" class="logo" />
-     
-  </div>
+ 
   
              </router-link>
-        <form @submit.prevent="handleSearch">
+     <div class="fixed-header">   <form @submit.prevent="handleSearch">
           <el-input
             size="small"
             placeholder="search music..."
@@ -25,7 +23,7 @@
             v-model="query"
             clearable
           />
-        </form>
+        </form></div>
       </el-menu>
     </el-col>
     <div class="genresMenu" v-if="$route.path === '/'">
@@ -236,31 +234,15 @@ export default {
   }
 </style>
 
-<style type="text/css">
-  .mobileShow {
-    display: none;
-  }
-  /* Smartphone Portrait and Landscape */
-  
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileShow {
-      display: inline;
+<style>
+  .fixed-header{
+        width: 100%;
+        position: fixed;        
+        padding: 10px 0;     
     }
-  }
-</style>
-<!--.mobileHide{ display: none;}-->
-
-<style type="text/css">
-  .mobileHide {
-    display: inline;
-  }
-  /* Smartphone Portrait and Landscape */
-  
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileHide {
-      display: none;
+    .fixed-header{
+        top: 0;
     }
-  }
 </style>
 
 

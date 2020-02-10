@@ -9,7 +9,7 @@
         active-text-color="#ffd04b"
       >
  
-  <br/><br/>
+  <br/>
             
         <form @submit.prevent="handleSearch">
           <el-input
@@ -68,10 +68,10 @@
     </div>
   </el-row></div>
   
+<br/><br/>
 
 
 </template>
-<br/><br/>
 
 
 

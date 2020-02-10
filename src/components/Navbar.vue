@@ -8,7 +8,13 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <router-link to="/"><br/>
+        <router-link to="/"><br/><div id=”content-desktop”>
+This is the content that will display on DESKTOPS.
+</div>
+
+<div id=”content-mobile”>
+This is the content that will display on MOBILE DEVICES.
+</div>
           <img src="../assets/logo.png" class="logo" />
         </router-link>
         <form @submit.prevent="handleSearch">
@@ -232,5 +238,17 @@ export default {
       box-sizing: border-box;
     }
   }
+</style>
+
+<style>
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
 </style>
 

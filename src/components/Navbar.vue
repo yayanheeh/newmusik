@@ -1,6 +1,6 @@
 <template>
  
-O<el-row>
+<el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
         background-color="#f7f8f8"

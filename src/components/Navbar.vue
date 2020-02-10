@@ -8,13 +8,15 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <router-link to="/"><br/><div id=”content-desktop”>
-This is the content that will display on DESKTOPS.
-</div>
-
-<div id=”content-mobile”>
-This is the content that will display on MOBILE DEVICES.
-</div>
+        <router-link to="/"><br/><div class="mobileHide">
+    <p>TEXT OR IMAGE NOT FOR MOBILE HERE
+      <p>
+  </div>
+  <p> yep its working</p>
+  <div class="mobileHide">
+    <p>THIS SHOULD NOT SHOW On Mobile (view in mobile mode)
+      <p>
+  </div>
           <img src="../assets/logo.png" class="logo" />
         </router-link>
         <form @submit.prevent="handleSearch">
@@ -240,15 +242,32 @@ export default {
   }
 </style>
 
-<style>
-.content-desktop {display: block;}
-.content-mobile {display: none;}
+<style type="text/css">
+  .mobileShow {
+    display: none;
+  }
+  /* Smartphone Portrait and Landscape */
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mobileShow {
+      display: inline;
+    }
+  }
+</style>
+<!--.mobileHide{ display: none;}-->
 
-@media screen and (max-width: 768px) {
-
-.content-desktop {display: none;}
-.content-mobile {display: block;}
-
-}
+<style type="text/css">
+  .mobileHide {
+    display: inline;
+  }
+  /* Smartphone Portrait and Landscape */
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mobileHide {
+      display: none;
+    }
+  }
 </style>
 
+
+  

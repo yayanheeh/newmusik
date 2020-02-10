@@ -8,17 +8,11 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <router-link to="/"><br/><div class="mobileHide">
-    <p>TEXT OR IMAGE NOT FOR MOBILE HERE
-      <p>
+<img src="../assets/logo.png" class="logo" />
+     
   </div>
-  <p> yep its working</p>
-  <div class="mobileHide">
-    <p>THIS SHOULD NOT SHOW On Mobile (view in mobile mode)
-      <p>
-  </div>
-          <img src="../assets/logo.png" class="logo" />
-        </router-link>
+  
+             </router-link>
         <form @submit.prevent="handleSearch">
           <el-input
             size="small"

@@ -1,7 +1,6 @@
 <template>
  
-<div class="fixed-header">
-  <el-row>
+O<el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
         background-color="#f7f8f8"
@@ -66,7 +65,7 @@
          />
       </el-col>
     </div>
-  </el-row></div>
+  </el-row>
 </template>
 
 
@@ -234,16 +233,7 @@ export default {
   }
 </style>
 
-<style>
-  .fixed-header{
-        width: 100%;
-        position: fixed;        
-        padding: 10px 0;     
-    }
-    .fixed-header{
-        top: 0;
-    }
-</style>
+
 
 
   

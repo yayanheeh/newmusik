@@ -4,7 +4,7 @@
   <el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
-        background-color="#3a3f41"
+        background-color="#f7f8f8"
         text-color="#fff"
         active-text-color="#ffd04b"
       >
@@ -134,7 +134,7 @@ export default {
     float: none;
   }
   .el-row {
-    background: #3a3f41;
+    background: #f7f8f8;
     padding: 0;
   }
   .el-menu {

@@ -1,6 +1,6 @@
 <template>
  
-
+<div class="fixed-header">
   <el-row>
     <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16" class="wrapper">
       <el-menu
@@ -11,7 +11,7 @@
  
   
              </router-link>
-     <div class="fixed-header">   <form @submit.prevent="handleSearch">
+        <form @submit.prevent="handleSearch">
           <el-input
             size="small"
             placeholder="search music..."
@@ -23,7 +23,7 @@
             v-model="query"
             clearable
           />
-        </form></div>
+        </form>
       </el-menu>
     </el-col>
     <div class="genresMenu" v-if="$route.path === '/'">
@@ -66,7 +66,7 @@
          />
       </el-col>
     </div>
-  </el-row>
+  </el-row></div>
 </template>
 
 
